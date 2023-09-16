@@ -9,14 +9,18 @@ const diaNoche = document.querySelector(".diaNoche div input")
 const bodyBackground = document.querySelector("body")
 const proyectos = document.querySelector(".proyectoss")
 const ingles = document.querySelector(".nivelIngles h3")
-
-const APIKey = "39d19eac955bc798e83d7f0bc5496d55"
-
-fetch(`http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=${APIKey}`)
-    .then(res => res.json())
-    .then(res => console.log(res))
+const grados = document.querySelector(".temperatura .datos div h2")
 
 
+
+const APIkey = "1af85e2a3dff54f33971ada62d308710"
+fetch(`http://api.weatherstack.com/current?access_key=${APIkey}&query=Rosario`)
+    .then(el => el.json())
+    .then(res => console.log(
+        grados.innerHTML = `${res.current.temperature}º`
+    ))
+
+grados.innerHTML
 idioma.addEventListener("click", () => {
     spanishB.classList.toggle("text-black")
     english.classList.toggle("text-black")
@@ -35,6 +39,7 @@ idioma.addEventListener("click", () => {
     edad.innerHTML === "Años" ? edad.innerHTML = "Years Old" : edad.innerHTML = "Años"
     proyectos.innerHTML === "Proyectos" ? proyectos.innerHTML = "Projects" : proyectos.innerHTML = "Proyectos"
     ingles.innerHTML === "Nivel de ingles" ? ingles.innerHTML = "English level" : ingles = "Nivel de ingles"
+
 }
 )
 
