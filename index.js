@@ -16,9 +16,13 @@ const grados = document.querySelector(".temperatura .datos div h2")
 const APIkey = "1af85e2a3dff54f33971ada62d308710"
 fetch(`http://api.weatherstack.com/current?access_key=${APIkey}&query=Rosario`)
     .then(el => el.json())
-    .then(res => console.log(
-        grados.innerHTML = `${res.current.temperature}º`
-    ))
+    .then(res => {
+        console.log(res)
+        grados.innerHTML = `${res.temperature
+            }º`
+    }
+    )
+
 
 grados.innerHTML
 idioma.addEventListener("click", () => {
@@ -48,6 +52,7 @@ idioma.addEventListener("click", () => {
 diaNoche.addEventListener("click", () => {
 
     bodyBackground.classList.toggle("dia")
+    diaNoche.classList.toggle("bgSwitch")
 }
 )
 
