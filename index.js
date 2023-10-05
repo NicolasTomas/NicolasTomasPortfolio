@@ -10,27 +10,38 @@ const bodyBackground = document.querySelector("body")
 const proyectos = document.querySelector(".proyectoss")
 const ingles = document.querySelector(".nivelIngles h3")
 const grados = document.querySelector(".temperatura .datos div h2")
+const proyectosdos = document.querySelector(".text-light ms-2 align-self-center fw-bold proyectosdos")
+
+
+const apiKey = "c3da08f04c2891a60c89940b57447055"
+const apiUrl = ""
 
 
 
-const APIkey = "1af85e2a3dff54f33971ada62d308710"
-fetch(`http://api.weatherstack.com/current?access_key=${APIkey}&query=Rosario`)
-    .then(el => el.json())
-    .then(res => {
-        console.log(res)
-        grados.innerHTML = `${res.temperature
-            }º`
-    }
-    )
+
+
+
+
+
+
+// const APIkey = "1af85e2a3dff54f33971ada62d308710"
+// fetch(`http://api.weatherstack.com/current?access_key=${APIkey}&query=Rosario`)
+//     .then(el => el.json())
+//     .then(res => {
+//         console.log(res)
+//         grados.innerHTML = `${res.temperature
+//             }`
+//     }
+//     )
 
 
 grados.innerHTML
 idioma.addEventListener("click", () => {
-    spanishB.classList.toggle("text-black")
-    english.classList.toggle("text-black")
+    spanishB.classList.toggle("text-light")
+    english.classList.toggle("text-light")
     descripcion.classList.toggle("languageChange")
 
-    descripcionTitle.innerHTML === "Hello my name is Orlando" ? descripcionTitle.innerHTML = "Hola soy Orlando" : descripcionTitle.innerHTML = "Hello my name is Orlando"
+    descripcionTitle.innerHTML === "Hello!! My name is Nicolas" ? descripcionTitle.innerHTML = "Hola!! Soy Nicolas" : descripcionTitle.innerHTML = "Hello!! My name is Nicolas";
 
     spanish.innerHTML === "ES" ? spanish.innerHTML = "EN" : spanish.innerHTML = "ES"
 
@@ -42,7 +53,10 @@ idioma.addEventListener("click", () => {
 
     edad.innerHTML === "Años" ? edad.innerHTML = "Years Old" : edad.innerHTML = "Años"
     proyectos.innerHTML === "Proyectos" ? proyectos.innerHTML = "Projects" : proyectos.innerHTML = "Proyectos"
-    ingles.innerHTML === "Nivel de ingles" ? ingles.innerHTML = "English level" : ingles = "Nivel de ingles"
+    ingles.innerHTML === "Nivel de ingles" ? ingles.innerHTML = "English level" : ingles.innerHTML = "Nivel de ingles"
+
+    proyectosdos.innerHTML === "Proyectos" ? proyectosdos.innerHTML = "Projects" : proyectosdos.innerHTML = "Proyectos";
+
 
 }
 )
@@ -55,4 +69,5 @@ diaNoche.addEventListener("click", () => {
     diaNoche.classList.toggle("bgSwitch")
 }
 )
+
 
