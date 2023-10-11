@@ -32,7 +32,7 @@
      background-image: linear-gradient(to bottom, rgba(3, 3, 3, 0.898), rgba(3, 3, 3, 0.898)), url(img/402107790_STATIC_NOISE_400.gif);
      z-index: 0;
      font-family: 'Space Grotesk', sans-serif !important;
-     transition: background-image 0.5s, color 0.5s;
+
  }
 
  .dia {
@@ -43,7 +43,7 @@
  .grid-container {
      display: grid;
      grid-template-columns: 16.5rem 16.5rem 16.5rem 16.5rem;
-     grid-template-rows: 16.5rem 16.5rem 16.5rem 16.5rem 16.5rem 16.5rem;
+     grid-template-rows: 16.5rem 16.5rem 16.5rem 16.5rem 16.5rem 16.5rem 16.5rem;
      margin: 6.25rem 12.5rem 6.25rem 12.5rem;
      gap: 1.3rem;
 
@@ -218,10 +218,40 @@
      transform: scale(1.04);
  }
 
- .chatbot div {
+ .flux {
      height: 9.5rem;
-     width: 9.5rem;
+     width: 25rem;
+     background-color: var(--color-1);
      padding: 6rem;
+     box-shadow: 0px 0px 13px 12px #2f3ec7 inset;
+     -webkit-box-shadow: 0px 0px 13px 12px #062aadd4 inset;
+     -moz-box-shadow: 0px 0px 13px 12px #171718 inset;
+
+ }
+
+ .globo {
+     background: aliceblue;
+     position: absolute;
+     bottom: -15%;
+     left: 50%;
+     border-radius: 1rem !important;
+     color: black;
+     box-shadow: -1px 2px 22px 4px rgba(0, 0, 0, 1);
+     -webkit-box-shadow: -1px 2px 22px 4px rgba(0, 0, 0, 1);
+     -moz-box-shadow: -1px 2px 22px 4px rgba(0, 0, 0, 1);
+     z-index: 1000;
+ }
+
+ .globoDiv {
+     width: 0rem;
+     height: 0;
+     border-bottom: 1.5rem solid aliceblue;
+     border-left: 0rem solid transparent;
+     border-right: 1.5rem solid transparent;
+     position: absolute;
+     bottom: 10%;
+     right: 10rem;
+     z-index: 1000;
  }
 
  .bi-robot {
@@ -239,7 +269,7 @@
 
      0%,
      100% {
-         text-shadow: 0 0 1vw #072fce, 0 0 3vw #062395, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+         text-shadow: 0 0 1vw hsl(228, 93%, 42%), 0 0 3vw #062395, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
          color: #28D7FE;
      }
 
@@ -421,3 +451,39 @@
      transform: scale(1.04);
 
  }
+
+
+
+ /* DESARROLLO DE SOFTWARE */
+
+ .informacion {
+     background-color: red;
+     grid-column: 3/4;
+     transition: 0.5s;
+     background-color: var(--color-4);
+ }
+
+ .informacion:hover {
+     transform: scale(1.06);
+ }
+
+ .contacto {
+     grid-column: 1/3;
+     transition: 0.5s;
+     background-color: var(--color-5);
+     background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.381), rgba(10, 10, 10, 0.381)), url(img/contacto.gif);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+ }
+
+ .contacto:hover {
+     transform: scale(1.04);
+ }
+
+ .bi-info-circle {
+     font-size: 8rem;
+     color: black;
+ }
+
+ /* CERTIFICADOS */
