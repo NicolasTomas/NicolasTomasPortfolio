@@ -6,11 +6,11 @@
  }
 
  :root {
-     --color-1: #776e83;
+     --color-1: #685c77;
      --color-2: #b5838d;
-     --color-3: #e5989b;
-     --color-4: #ff9494;
-     --color-5: #ffcdb2;
+     --color-3: #be8587;
+     --color-4: #cb6060;
+     --color-5: #a78878;
 
  }
 
@@ -21,7 +21,7 @@
      width: 100vw;
      position: fixed;
      top: 0%;
-     filter: opacity(0.104);
+     filter: opacity(0.13);
      pointer-events: none;
      z-index: 10000;
 
@@ -58,10 +58,22 @@
      justify-content: flex-end;
      align-items: flex-start;
      flex-direction: column;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .wabe {
+     position: absolute;
  }
 
  .descripcion h1 {
      font-size: 3rem;
+     z-index: 1;
+
+ }
+
+ .descripcion p {
+     z-index: 1;
  }
 
  .present {
@@ -91,6 +103,7 @@
 
  .form-check-input:checked {
      border-color: transparent !important;
+     background-color: rgba(163, 163, 163, 0.885) !important;
  }
 
  .bgSwitch {
@@ -125,9 +138,12 @@
  .linkedin {
      background-color: #3b80c4;
      transition: 0.5s;
+     position: relative;
 
 
  }
+
+
 
  .linkedin:hover {
      transform: scale(1.06);
@@ -148,6 +164,7 @@
      background-repeat: no-repeat;
      transition: 0.5s;
      background-color: rgba(255, 255, 255, 1);
+     position: relative;
  }
 
 
@@ -169,8 +186,9 @@
      background-color: var(--color-1);
      background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.607), rgba(10, 10, 10, 0.607)), url(img/githubgif.gif);
      background-position: 0%;
-
      transition: 0.5s;
+     position: relative;
+
  }
 
  .github:hover {
@@ -194,6 +212,7 @@
  .mail {
      background-color: var(--color-1);
      transition: 0.5s;
+     position: relative;
  }
 
  .mail:hover {
@@ -201,7 +220,7 @@
 
  }
 
- .mail i {
+ .fa-envelope {
      font-size: 8rem;
  }
 
@@ -286,6 +305,7 @@
      grid-column: 1/3;
      background-color: var(--color-2);
      transition: 0.5s;
+     position: relative;
  }
 
  .certificacion:hover {
@@ -300,6 +320,7 @@
      flex-direction: column;
      align-items: center;
      transition: 0.5s;
+     position: relative;
 
  }
 
@@ -320,7 +341,7 @@
  }
 
  .nivelIngles div {
-     font-size: 6rem;
+     font-size: 7rem;
  }
 
  /* CLIMA */
@@ -385,10 +406,13 @@
  }
 
  .bi-box-arrow-up-right {
-     position: relative;
-     color: white;
-     top: 0.8rem;
-     right: 0.7rem;
+     position: absolute;
+     color: rgb(213, 213, 213);
+     top: 0.7rem;
+     right: 0.8rem;
+     z-index: 10000;
+     font-weight: 900;
+
  }
 
  /* PROYECTOS */
@@ -458,9 +482,10 @@
 
  .informacion {
      background-color: red;
-     grid-column: 3/4;
+     grid-column: 3/5;
      transition: 0.5s;
      background-color: var(--color-4);
+     position: relative;
  }
 
  .informacion:hover {
@@ -475,6 +500,7 @@
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center;
+     position: relative;
  }
 
  .contacto:hover {
@@ -487,3 +513,60 @@
  }
 
  /* CERTIFICADOS */
+ .certificadosgrid {
+     display: flex;
+
+     gap: 1.3rem;
+     margin-top: 5rem;
+     margin-bottom: 5rem;
+     align-content: center;
+     justify-content: center;
+ }
+
+ .imagen {
+     height: 15rem;
+     transition: 0.5s;
+ }
+
+ .imagen:hover {
+     transform: scale(1.04);
+
+ }
+
+ form {
+     display: flex;
+     flex-direction: column;
+     margin: 2rem 4rem 0 4rem;
+     color: white;
+ }
+
+ .enviar {
+     background-color: var(--color-2);
+     border-radius: 0.5rem;
+     border-color: transparent;
+     transition: 0.3s;
+     margin-top: 1rem;
+
+ }
+
+ .enviar:hover {
+     background-color: white;
+
+ }
+
+ .informacion-pagina {
+     display: flex;
+     flex-direction: column;
+     width: 100vw;
+     align-items: center;
+     justify-content: center;
+     margin-top: 4rem;
+     color: white;
+     text-align: center;
+
+ }
+
+ .borrar {
+     border-radius: 0.5rem;
+     border-color: transparent;
+ }
